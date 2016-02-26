@@ -1,0 +1,52 @@
+<p id="notice"><%= notice %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Data</th><td>&nbsp;</td>
+      <th>Operação</th><td>&nbsp;</td>
+      <th>Valor</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @deposits.each do |deposit| %>
+      <tr>
+        <td><%= deposit.data %></td><td>&nbsp;</td>
+        <td>Depósitos em Conta</td><td>&nbsp;</td>
+        <td>+ <%= deposit.valor %></td>
+      </tr>
+    <% end %>
+
+    <% @trasnferences.each do |trasnference| %>
+      <tr>
+        <td><%= trasnference.data %></td><td>&nbsp;</td>
+        <td>Transferencia entre contas</td><td>&nbsp;</td>
+        <td>- <%= trasnference.valor %> --> <%= trasnference.contadestino %></td>
+      </tr>
+    <% end %>
+
+    <% @whithdraws.each do |whithdraw| %>
+      <tr>
+        <td><%= whithdraw.data %></td><td>&nbsp;</td>
+         <td>Saque em conta </td><td>&nbsp;</td>
+        <td>- <%= whithdraw.valor %></td>
+      </tr>
+    <% end %>
+    <tr>
+      &nbsp;
+    </tr>
+    <% @accounts.each do |account| %>
+    <tr>
+        <td><b>Nome Cliente: </b></td>
+        <td><%= account.customer.nome %></td>
+      </tr>
+      <tr>
+        <td><b>Saldo Atual: </b></td>
+        <td><%= account.saldo %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

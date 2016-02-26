@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Appcaixa</title>
+
+</head>
+<body>
+<ul>
+  <li><%= link_to "Inicio", root_path  %></li>
+  <li><%= link_to "Sua Conta", customers_path  %></li>
+  <li><%= link_to "Realizar depósitos", new_deposit_path  %></li>
+  <li><%= link_to "Realizar saques", new_whithdraw_path  %></li>
+  <li><%= link_to "Realizar transferências", new_trasnference_path  %></li>
+  <li><%= link_to "Solicitar saldo", accounts_path  %></li>
+  <li><%= link_to "Solicitar extrato", deposits_path  %></li>
+</ul>
+
+<%= yield %>
+
+</body>
+</html>

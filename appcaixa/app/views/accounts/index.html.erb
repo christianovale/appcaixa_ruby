@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Saldo de Conta Corrente</h1>
+
+<table>
+
+
+  <tbody>
+    <% @accounts.each do |account| %>
+    <tr>
+        <td><b>Nome Cliente: </b></td>
+        <td><%= account.customer.nome %></td>
+      </tr>
+      <tr>
+        <td><b>Saldo: </b></td>
+        <td><%= account.saldo %></td>
+      </tr>
+      <tr>
+        <td><b>Ativa: </b></td>
+        <td><%= account.ativa %></td>
+        </tr>
+
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

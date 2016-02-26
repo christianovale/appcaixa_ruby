@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+<br/><br/>
+<b>Deposito Realizado</b>
+<br/><br/>
+<p>
+  <strong>Data:</strong>
+  <%= @deposit.data %>
+</p>
+
+<p>
+  <strong>Valor:</strong>
+  <%= @deposit.valor %>
+</p>
+
+<p>
+  <strong>Account:</strong>
+  <%= @deposit.account.id %> - 
+  <%= @deposit.account.customer.nome %>
+</p>
+
+
+

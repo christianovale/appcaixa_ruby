@@ -1,0 +1,30 @@
+<%= form_for(@trasnference) do |f| %>
+  <% if @trasnference.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@trasnference.errors.count, "error") %> prohibited this trasnference from being saved:</h2>
+
+      <ul>
+      <% @trasnference.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :data %><br>
+    <%= f.date_select :data %>
+  </div>
+  <div class="field">
+    <%= f.label :valor %><br>
+    <%= f.text_field :valor %>
+  </div>
+  <div class="field">
+    <%= f.label :contadestino %><br>
+    <%= f.number_field :contadestino %>
+  </div>
+  <br/><br/>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

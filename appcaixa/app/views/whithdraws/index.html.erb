@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Whithdraws</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Data</th>
+      <th>Valor</th>
+      <th>Account</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @whithdraws.each do |whithdraw| %>
+      <tr>
+        <td><%= whithdraw.data %></td>
+        <td><%= whithdraw.valor %></td>
+        <td><%= whithdraw.account %></td>
+        <td><%= link_to 'Show', whithdraw %></td>
+        <td><%= link_to 'Edit', edit_whithdraw_path(whithdraw) %></td>
+        <td><%= link_to 'Destroy', whithdraw, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Whithdraw', new_whithdraw_path %>

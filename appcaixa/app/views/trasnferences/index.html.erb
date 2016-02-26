@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Trasnferencia entre Contas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Data</th>
+      <th>Valor</th>
+      <th>Contadestino</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @trasnferences.each do |trasnference| %>
+      <tr>
+        <td><%= trasnference.data %></td>
+        <td><%= trasnference.valor %></td>
+        <td><%= trasnference.contadestino %></td>
+        <td><%= link_to 'Show', trasnference %></td>
+        <td><%= link_to 'Edit', edit_trasnference_path(trasnference) %></td>
+        <td><%= link_to 'Destroy', trasnference, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Trasnference', new_trasnference_path %>
